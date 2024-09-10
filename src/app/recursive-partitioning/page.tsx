@@ -2,8 +2,10 @@ import React from "react";
 
 const RecursivePartitioningPage = () => {
   return (
-    <section>
-      <h1 className="text-4xl">Recursive Partitioning Page</h1>
+    <section className="w-full max-w-screen-lg mx-auto px-4 py-16">
+      <h1 className="text-3xl font-normal tracking-tighter">
+        Recursive Partitioning:
+      </h1>
     </section>
   );
 };
