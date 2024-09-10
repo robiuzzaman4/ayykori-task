@@ -5,7 +5,7 @@ type SplitDirection = "vertical" | "horizontal" | null;
 
 const RecursiveLayout = () => {
   return (
-    <div className="w-[400px] h-[400px] mx-auto grid place-items-center">
+    <div className="w-[500px] h-[500px] mx-auto grid place-items-center">
       <RecursiveBox />
     </div>
   );
@@ -22,9 +22,9 @@ const RecursiveBox = () => {
     <div
       className={`w-full h-full flex border border-zinc-200 ${
         splitDirection === "vertical"
-          ? "flex-row border-none border-y"
+          ? "flex-row border-none"
           : splitDirection === "horizontal"
-          ? "flex-col border-none border-x"
+          ? "flex-col border-none"
           : ""
       }`}
     >
@@ -34,15 +34,15 @@ const RecursiveBox = () => {
           <RecursiveBox />
         </>
       ) : (
-        <div className="flex space-x-3 m-auto">
+        <div className="flex items-center justify-center w-full gap-2">
           <button
-            className="h-8 w-8 border border-zinc-200"
+            className="h-8 w-8 border border-zinc-200 text-sm font-medium"
             onClick={() => handleSplit("vertical")}
           >
             V
           </button>
           <button
-            className="h-8 w-8 border border-zinc-200"
+            className="h-8 w-8 border border-zinc-200 text-sm font-medium"
             onClick={() => handleSplit("horizontal")}
           >
             H
